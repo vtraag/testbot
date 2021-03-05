@@ -23,5 +23,5 @@ jobs:
         run: |
           # Stage the file, commit and push
           git add time.txt
-          git commit -m "${{ github.event.head_commit.message }}. Auto-deployed based on ${{ github.event.after }}."
+          git commit -m "${{ github.event.head_commit.message }} [Triggered by ${{ github.event.after }}]"
           git push origin master
